@@ -28,3 +28,20 @@ The dataset contains employee information including:
 - Feature engineering (salary level classification)
 
 ## Project Structure
+employee-data-analysis/
+│
+├── data/
+│   └── employees.csv
+├── analysis.ipynb
+├── README.md
+└── requirements.txt
+
+## Conclusion
+This analysis provides useful insights for management decisions such as
+salary distribution and workforce planning.
+
+
+
+
+
+
