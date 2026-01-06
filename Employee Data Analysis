@@ -1,0 +1,25 @@
+import pandas as pd
+df=pd.read_csv("Employee.csv.txt")
+df.head()
+df.shape
+df.info()
+df.describe()
+avg_salary=df['salary'].mean()
+print("avg_salary=",avg_salary)
+high_paid=df[df['salary']>avg_salary]
+print(high_paid)
+#highest mean of salary depends on city
+df.groupby('city')['salary'].mean().sort_values(ascending=False)
+avg_salary=df['salary'].mean()
+print("avg_salary=",avg_salary)
+high_paid=df[df['salary']>avg_salary]
+print(high_paid)
+def salary_level(s):
+    if s>=1000:
+        return "High"
+    elif s>=700:
+        return "Medium"
+    else:
+        return "Low"
+
+df["salary_level"]=df["salary"].apply(salary_level)
